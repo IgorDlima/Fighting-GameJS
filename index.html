@@ -5,11 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Figthing-game</title>
-  
+  <style>
+    * {
+      box-sizing: border-box;
+
+    }
+  </style>
 </head>
 <body>
-  <canvas></canvas>
-
+  <!-- div container -->
+  <div 
+  style="
+   position: relative;
+   display: inline;">
+    
+    <!-- smaller div container -->
+    <div 
+    style="
+      position: absolute;
+      display: flex; 
+      width: 100%;
+      align-items: center;
+      padding: 20px;">
+      <!-- player health -->
+      <div style="position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">
+        <div style="background-color: yellow; height: 30px; width: 100%;"></div>
+        <div id="PlayerHealth" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; width: 100%; " ></div>
+      </div>
+      <!--timer -->
+      <div 
+      style="
+        background-color: red; 
+        width: 100px; 
+        height: 100px; 
+        flex-shrink: 0;" 
+        ></div>
+      <!-- enemy health -->
+      <div style="position: relative; height: 30px; width: 100%;">
+      <div style="background-color: yellow; height: 30px;"></div>
+      <div id="EnemyHealth" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; left: 0; " ></div>
+    </div>
+    <div></div>
+  </div>
+    <canvas></canvas>
+</div>  
 <script src="index.js"></script>
 </body>
 </html>
