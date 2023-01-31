@@ -16,10 +16,11 @@
   <!-- div container -->
   <div 
   style="
-   position: relative;
+   position: absolute;
    display: inline;">
     
     <!-- smaller div container -->
+    
     <div 
     style="
       position: absolute;
@@ -27,28 +28,64 @@
       width: 100%;
       align-items: center;
       padding: 20px;">
+      
       <!-- player health -->
+     
       <div style="position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">
         <div style="background-color: yellow; height: 30px; width: 100%;"></div>
         <div id="PlayerHealth" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; width: 100%; " ></div>
       </div>
+      
       <!--timer -->
+      
       <div 
+      id="timer"
       style="
         background-color: red; 
         width: 100px; 
         height: 100px; 
-        flex-shrink: 0;" 
-        ></div>
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;" 
+        
+        >
+        10
+      </div>
+
+     
       <!-- enemy health -->
+      
       <div style="position: relative; height: 30px; width: 100%;">
       <div style="background-color: yellow; height: 30px;"></div>
-      <div id="EnemyHealth" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; left: 0; " ></div>
+      <div id="EnemyHealth" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; left: 0; " 
+      ></div>
     </div>
     <div></div>
   </div>
+    <div 
+    id="displayText"
+    style="
+    position: absolute; 
+    color: white; 
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    "
+    >
+    Tie
+  </div>
     <canvas></canvas>
 </div>  
+
+<script src="Js/untils.js"></script>
+<script src="Js/classes.js"></script>
 <script src="index.js"></script>
+
+
 </body>
 </html>
