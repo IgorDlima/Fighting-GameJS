@@ -1,5 +1,7 @@
-# Fighting-GameJS
-A project of a 2d fighting game 
+# Fighting-GameJS 
+A project of a 2d fighting game under development
+
+
 
 ## in this project i use : 
 
