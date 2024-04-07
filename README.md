@@ -1,2 +1,6 @@
 # Fighting-GameJS
-This is my first project in JavaScript !! :D 
+A project of a 2d fighting game 
+
+in this project i use : 
+
+
