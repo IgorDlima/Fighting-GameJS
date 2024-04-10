@@ -71,8 +71,12 @@ const player = new Fighter({
     takeHit: {
       imageSrc: './img/samuraiMack/take Hit - white silhouette.png' ,
       framesMax: 4
-    }
-  },
+    },
+    death: {
+      imageSrc: './img/samuraiMack/Death.png' ,
+      framesMax: 6
+  }
+},
   attackBox: {
     offset: {
       x: 100, 
@@ -130,8 +134,12 @@ const enemy = new Fighter({
     takeHit: {
       imageSrc: './img/kenji/Take hit.png' ,
       framesMax: 3
-    }
-  },
+    },
+    death: {
+      imageSrc: './img/kenji/Death.png' ,
+      framesMax: 7
+  }
+},
     attackBox: {
       offset: {
         x: -170,
@@ -263,6 +271,8 @@ animate()
 
 window.addEventListener ('keydown', (event) => {
  
+  if (!player.dead) {
+
   
   
   switch (event.key) {
@@ -280,9 +290,12 @@ window.addEventListener ('keydown', (event) => {
     case ' ':
       player.attack()  
       break
+   }
+  }
 
-      //enemy keys
-      case 'ArrowRight':
+  if (!enemy.dead) {
+  switch(event.key) {
+    case 'ArrowRight':
       keys.ArrowRight.pressed = true
       enemy.lastkey = 'ArrowRight'
       break
@@ -298,7 +311,7 @@ window.addEventListener ('keydown', (event) => {
       
       break
   }
-  
+  }  
   
 })
 
